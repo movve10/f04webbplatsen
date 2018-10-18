@@ -1,0 +1,24 @@
+body {
+  color: transparent;
+  background-color: #B5F04C;
+}
+
+h1 {
+  color: #1E2F00;
+  background-color: transparent;
+  text-align: center;
+  font-family: "Verdana", serif;
+  font-size: 1.7em;
+}
+
+p {
+  color: #1E2F00;
+  background-color: transparent;
+  text-align: center;
+  font-family: "Verdana", serif;
+  font-size: 1.2em;
+}
+.center {
+  display: block;
+  margin: auto;
+}

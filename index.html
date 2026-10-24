@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html lang="sv" dir="ltr">
+<html lang="sv">
   <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-    <title>Shrek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Huvudräkning</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <img src="bilder/shrek.jpeg" alt="Shrek" class="center">
-    <h1 class="center">Shrek</h1>
-    <p class="center">Jag älskar shrek för att han är den
-      coolaste karaktären </p>
+    <main>
+      <!-- Startsida: välj nivå -->
+      <section id="start" class="screen">
+        <h1>Huvudräkning</h1>
+        <p class="lead">Välj nivå. 10 tal per runda. Svarar du fel får du ett tips på hur man räknar ut det i huvudet.</p>
+        <div class="levels" id="levels"></div>
+      </section>
+
+      <!-- Spelet -->
+      <section id="game" class="screen" hidden>
+        <div class="topbar">
+          <button class="link" id="quit">← Avbryt</button>
+          <span id="level-name" class="pill"></span>
+          <span id="timer" class="muted">0 s</span>
+        </div>
+        <div class="progress"><div id="progress-bar"></div></div>
+        <p id="counter" class="muted"></p>
+        <p id="question" class="question"></p>
+        <form id="answer-form" autocomplete="off">
+          <input id="answer" type="text" inputmode="numeric" pattern="[0-9]*" aria-label="Ditt svar" placeholder="?">
+          <button type="submit" id="submit">Svara</button>
+        </form>
+        <div id="feedback" class="feedback" hidden></div>
+        <p id="streak" class="muted"></p>
+      </section>
+
+      <!-- Resultat -->
+      <section id="result" class="screen" hidden>
+        <h2 id="result-title"></h2>
+        <p id="result-score" class="big"></p>
+        <p id="result-time" class="muted"></p>
+        <p id="result-best" class="muted"></p>
+        <div class="actions">
+          <button id="again">Kör igen</button>
+          <button id="back" class="secondary">Byt nivå</button>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
   </body>
 </html>
